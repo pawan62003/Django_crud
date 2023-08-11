@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Read</title>
+</head>
+<body>
+    <h1>Data</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        {% for name, values in data.items %}
+        <tr>
+            <td>{{ name }}</td>
+            <td>{{ values.age }}</td>
+            <td>{{ values.city }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/create">Go to Create</a>
+    <a href="/update">Go to Update</a>
+    <a href="/delete">Go to Delete</a>
+</body>
+</html>

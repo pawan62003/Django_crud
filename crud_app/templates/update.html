@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update</title>
+</head>
+<body>
+    <h1>Update Entry</h1>
+    <form method="post" action="">
+        {% csrf_token %}
+        <label for="name">Name:</label>
+        <select name="name">
+            {% for name in data.keys %}
+            <option value="{{ name }}">{{ name }}</option>
+            {% endfor %}
+        </select><br>
+        <label for="age">Age:</label>
+        <input type="text" name="age"><br>
+        <label for="city">City:</label>
+        <input type="text" name="city"><br>
+        <button type="submit">Submit</button>
+    </form>
+    <a href="/read">Go to Read</a>
+</body>
+</html>
