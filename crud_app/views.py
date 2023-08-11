@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
 
 data = {
-    "name":"pawan",
-    "age":21,
+
 }  # Simulated data storage
 
 def create(request):
